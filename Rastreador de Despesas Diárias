@@ -1,0 +1,51 @@
+# Rastreador de despesas desenvolvido em Python, com funções para adicionar, visualizar, somar e calcular a média de gastos, limpar registros e tratar opções inválidas.
+
+print("Welcome to the Daily Expense Tracker!")
+
+print("\nMenu:")
+print("1. Add a new expense")
+print("2. View all expenses")
+print("3. Calculate total and average expense")
+print("4. Clear all expenses")
+print("5. Exit")
+
+lista_de_despesas = []
+valor = 0
+total_de_despesas = 0
+media_das_despesas = 0
+
+while True:
+    opcao_menu = input()
+    if opcao_menu == "1":
+        entrada = float(input())
+        lista_de_despesas.append(entrada)
+        print("Expense added successfully!")
+
+    if opcao_menu == "2" and len(lista_de_despesas) == 0:
+        print("No expenses recorded yet.")
+    elif opcao_menu == "2" and len(lista_de_despesas) > 0:
+        print("Your expenses:")
+        for item, valor in enumerate(lista_de_despesas):
+            item += 1
+            print(f"{item}. {valor}")
+
+    if opcao_menu == "3" and len(lista_de_despesas) == 0:
+        print("No expenses recorded yet.")
+    elif opcao_menu == "3" and len(lista_de_despesas) > 0:
+        for item, valor in enumerate(lista_de_despesas):
+            total_de_despesas += valor
+        media_das_despesas = total_de_despesas / len(lista_de_despesas)
+        print(f"Total expense: {total_de_despesas}")
+        print(f"Average expense: {media_das_despesas}")
+
+    if opcao_menu == "4":
+        lista_de_despesas.clear()
+        print("All expenses cleared.")
+
+    if opcao_menu == "5":
+        print("Exiting the Daily Expense Tracker. Goodbye!")
+        break
+
+    if opcao_menu != "1" and opcao_menu != "2" and opcao_menu != "3" and opcao_menu != "4" and opcao_menu != "5":
+        print("Invalid choice. Please try again.")
+
