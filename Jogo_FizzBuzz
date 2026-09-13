@@ -1,4 +1,4 @@
-# Jogo: FizzBuzz
+# Jogo em Python que classifica números de acordo com sua divisibilidade por 3 e 7 e identifica números que contêm o dígito 3, usando a regra “Almost Fizz”.
 
 print("Welcome to FizzBuzz!")
 
