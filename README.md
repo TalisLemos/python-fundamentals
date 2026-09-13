@@ -1,4 +1,4 @@
-# python-fundamentals
+# Jogo: FizzBuzz
 
 print("Welcome to FizzBuzz!")
 
