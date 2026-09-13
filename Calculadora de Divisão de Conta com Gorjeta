@@ -1,0 +1,13 @@
+# Calculadora em Python que recebe o valor da conta, a gorjeta e o número de pessoas, calcula o total com gorjeta e o valor a ser pago por cada pessoa.
+
+bill_amount = float(input())
+tip_percentage = float(input())
+pessoas = int(input())
+
+tip_amount = (tip_percentage / 100) * bill_amount
+
+total_amount = bill_amount + tip_amount
+valor_por_pessoa = total_amount / pessoas
+
+print(f"{total_amount}")
+print(f"{valor_por_pessoa}")
